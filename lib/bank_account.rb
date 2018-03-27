@@ -21,7 +21,7 @@ attr_reader :name
   end
 
   def close_account
-    delete
+    status = "closed"
   end
 
 end
