@@ -35,4 +35,5 @@ attr_reader :sender, :receiver
       @status = "complete"
     end
   end
+
 end
