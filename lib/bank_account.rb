@@ -9,7 +9,7 @@ attr_reader :name
   end
 
   def deposit(money)
-    @balance += money
+    balance += money
   end
 
   def display_balance
