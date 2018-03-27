@@ -15,12 +15,14 @@ attr_reader :sender, :receiver
 
   def execute_transaction
     if valid?
-      @sender.balance -= @amount
-      @receiver.balance += @amount
-      @status = "complete"
-    else
+      if @status = "pending"
+        @sender.balance -= @amount
+        @receiver.balance += @amount
+        @status = "complete"
+      end
+    if !valid?
       @status = "rejected"
-      puts "Transaction rejected. Please check your account balance."
+      "Transaction rejected. Please check your account balance."
     end
   end
 
