@@ -10,7 +10,7 @@ attr_reader :sender, :receiver
   end
 
   def valid?
-    @sender.valid? && @receiver.valid?
+    @sender.valid? && @receiver.valid? && @status = "pending"
   end
 
   def execute_transaction
