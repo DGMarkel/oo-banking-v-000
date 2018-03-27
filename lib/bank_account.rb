@@ -9,7 +9,7 @@ attr_reader :name
   end
 
   def deposit(money)
-    balance += money
+    @balance += money
   end
 
   def display_balance
@@ -21,7 +21,7 @@ attr_reader :name
   end
 
   def close_account
-    status = "closed"
+    @status = "closed"
   end
 
 end
