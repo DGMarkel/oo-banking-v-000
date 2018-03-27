@@ -10,11 +10,12 @@ attr_reader :sender, :receiver
   end
 
   def valid?
-    @sender.valid? && @receiver.valid? && @status = "pending"
+    @sender.valid? && @receiver.valid?
   end
 
   def execute_transaction
-    if valid?
+    if @status == "pending"
+      if valid?
         @sender.balance -= @amount
         @receiver.balance += @amount
         @status = "complete"
