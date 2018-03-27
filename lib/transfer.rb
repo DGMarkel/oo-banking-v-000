@@ -25,12 +25,14 @@ attr_reader :sender, :receiver
         @sender.balance -= @amount
         @receiver.balance += @amount
         @status = "complete"
-        @completed_transaction_info = [@sender, @receiver, @amount]
-        binding.pry
       end
     end
   end
 
   def reverse_transfer
+    if @status == "complete"
+      @receiver.balance -= @amount
+      @sender.balance += @amount
+    end
   end
 end
