@@ -16,8 +16,8 @@ attr_reader :sender, :receiver
   def execute_transaction
     if @status == "pending"
       if @sender.balance < @amount
-        "Transaction rejected. Please check your account balance."
         @status = "rejected"
+        "Transaction rejected. Please check your account balance."
       elsif valid?
         @sender.balance -= @amount
         @receiver.balance += @amount
