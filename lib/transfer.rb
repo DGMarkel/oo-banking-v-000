@@ -32,4 +32,5 @@ attr_reader :sender, :receiver
   end
 
   def reverse_transfer
+  end
 end
