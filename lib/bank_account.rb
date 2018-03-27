@@ -13,7 +13,7 @@ attr_reader :name
   end
 
   def display_balance
-    @balance
+    balance
   end
 
   def valid?
