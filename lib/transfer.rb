@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
 attr_accessor :amount, :status, :completed_transaction_info
 attr_reader :sender, :receiver
@@ -24,6 +26,7 @@ attr_reader :sender, :receiver
         @receiver.balance += @amount
         @status = "complete"
         @completed_transaction_info = [@sender, @receiver, @amount]
+        binding.pry
       end
     end
   end
