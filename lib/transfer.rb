@@ -8,5 +8,5 @@ attr_reader :sender, :receiver
     @transfer_amount = transfer_amount
     @status = pending
   end
-    
+
 end
