@@ -1,7 +1,7 @@
 require 'pry'
 
 class Transfer
-attr_accessor :amount, :status, :completed_transaction_info
+attr_accessor :amount, :status
 attr_reader :sender, :receiver
 
   def initialize(sender, receiver, amount = 50)
@@ -9,7 +9,6 @@ attr_reader :sender, :receiver
     @receiver = receiver
     @amount = amount
     @status = "pending"
-    @completed_transaction_info = nil
   end
 
   def valid?
