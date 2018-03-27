@@ -18,5 +18,6 @@ attr_reader :sender, :receiver
       @sender.balance -= @amount
       @receiver.balance += @amount
     end
+  end
 
 end
